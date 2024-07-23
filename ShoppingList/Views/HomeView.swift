@@ -13,6 +13,10 @@ struct HomeView: View {
     @State private var showingSheet = false
     
     var body: some View {
+        ZStack{
+            if homeViewModel.items.isEmpty{
+                EmptyStateView()
+            } else {
                 List{
                     ForEach(homeViewModel.items){ item in
                         ListItemView(item: item)
@@ -31,6 +35,9 @@ struct HomeView: View {
                     
                 }
                 .listStyle(PlainListStyle())
+            }
+        }
+                
                 .navigationTitle("Shopping List")
                 .navigationBarItems(
                     leading: EditButton(),
