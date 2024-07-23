@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @State private var selectedItems: [Bool] = Array(repeating: false, count: 100)
+    @State private var listItem: String = ""
+
     var body: some View {
         VStack (alignment: .leading){
             
@@ -29,21 +31,22 @@ struct ContentView: View {
                         .fill(self.selectedItems[index] ? Color.blue :Color.clear)
                         .stroke(Color.black, lineWidth:2)
                         .frame(width: 20)
+                        .onTapGesture {
+                            self.selectedItems[index].toggle()
                     
-                    Text("Item \(index)")
+                    TextField(
+                        " ",
+                        value: $listItem,
+                        format: .name(style: .medium)
+                    )
                     
                 }
-                .onTapGesture {
-                    self.selectedItems[index].toggle()
+                
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
         }.listStyle(.plain)
-        
-        
-        
-        
-        
+    
     }
     
 }
