@@ -10,8 +10,7 @@ import SwiftUI
 struct EmptyStateView: View {
     var body: some View {
         VStack {
-            Image("notepad asset")
-                .resizable()
+            Text("✅")
                 .frame(width: 100, height: 100)
             
             Text("Start adding things to the list")
@@ -28,5 +27,7 @@ struct EmptyStateView: View {
 }
 
 #Preview {
-    EmptyStateView()
+    NavigationView{
+        EmptyStateView()
+    }
 }

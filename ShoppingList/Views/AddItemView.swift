@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddItemView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var homeViewModel: HomeViewModel
+    @StateObject var articlesViewModel = DataStackModel()
     
     @State var textFieldTitle: String = ""
     @State var textFieldDescription: String = ""
+    @State var textFieldQuantity: String = ""
     
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
@@ -36,7 +39,7 @@ struct AddItemView: View {
                 .background(Color(UIColor.systemGray6))
                 .cornerRadius(10)
             
-            TextField("Description", text: $textFieldDescription)
+            TextField("Quantity", text: $textFieldQuantity)
                 .padding()
                 .frame(height: 100, alignment: .top)
                 .background(Color(UIColor.systemGray6))
@@ -45,16 +48,18 @@ struct AddItemView: View {
                 .multilineTextAlignment(.leading)
             
             
-            Button(action: saveButtonPressed, label: {
-                Text("Add")
-                    .frame(height: 60)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(Color.accentColor)
-                    .foregroundColor(.white)
-                    .cornerRadius(16)
-
-                
-            })
+            Button(action: {
+                guard !textFieldTitle.isEmpty else {return}
+                articlesViewModel.addArticle(name: textFieldTitle, quantity: textFieldQuantity)},
+                   label: {
+                       Text("Add")
+                       .frame(height: 60)
+                       .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                       .background(Color.accentColor)
+                       .foregroundColor(.white)
+                       .cornerRadius(16)
+                }
+            )
             
             Button("Dismiss") {
                     dismiss()

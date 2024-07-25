@@ -10,15 +10,14 @@
 		1848B0F52C46EC8E005849F1 /* ShoppingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B0F42C46EC8E005849F1 /* ShoppingListApp.swift */; };
 		1848B0F92C46EC90005849F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1848B0F82C46EC90005849F1 /* Assets.xcassets */; };
 		1848B0FD2C46EC90005849F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1848B0FC2C46EC90005849F1 /* Preview Assets.xcassets */; };
-		1848B1072C46EC90005849F1 /* ShoppingListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1062C46EC90005849F1 /* ShoppingListTests.swift */; };
-		1848B1112C46EC90005849F1 /* ShoppingListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1102C46EC90005849F1 /* ShoppingListUITests.swift */; };
-		1848B1132C46EC90005849F1 /* ShoppingListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1122C46EC90005849F1 /* ShoppingListUITestsLaunchTests.swift */; };
 		1848B1212C4728F7005849F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1202C4728F7005849F1 /* HomeView.swift */; };
 		1848B1232C4D1334005849F1 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1222C4D1334005849F1 /* ListItemView.swift */; };
 		1848B1292C4D1618005849F1 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1282C4D1618005849F1 /* AddItemView.swift */; };
 		1848B12F2C4D28FD005849F1 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B12E2C4D28FD005849F1 /* ItemModel.swift */; };
 		1848B1332C4D3C44005849F1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1322C4D3C44005849F1 /* HomeViewModel.swift */; };
 		1848B1352C505A8B005849F1 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1342C505A8B005849F1 /* EmptyStateView.swift */; };
+		1848B13A2C51ACF8005849F1 /* DataStackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848B1392C51ACF8005849F1 /* DataStackModel.swift */; };
+		1848B1402C51AE83005849F1 /* ArticlesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1848B13E2C51AE83005849F1 /* ArticlesContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +44,15 @@
 		1848B0FA2C46EC90005849F1 /* ShoppingList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShoppingList.entitlements; sourceTree = "<group>"; };
 		1848B0FC2C46EC90005849F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1848B1022C46EC90005849F1 /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1848B1062C46EC90005849F1 /* ShoppingListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTests.swift; sourceTree = "<group>"; };
 		1848B10C2C46EC90005849F1 /* ShoppingListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1848B1102C46EC90005849F1 /* ShoppingListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListUITests.swift; sourceTree = "<group>"; };
-		1848B1122C46EC90005849F1 /* ShoppingListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1848B1202C4728F7005849F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1848B1222C4D1334005849F1 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		1848B1282C4D1618005849F1 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		1848B12E2C4D28FD005849F1 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		1848B1322C4D3C44005849F1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1848B1342C505A8B005849F1 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		1848B1392C51ACF8005849F1 /* DataStackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStackModel.swift; sourceTree = "<group>"; };
+		1848B13F2C51AE83005849F1 /* ArticlesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticlesContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				1848B0F32C46EC8E005849F1 /* ShoppingList */,
-				1848B1052C46EC90005849F1 /* ShoppingListTests */,
-				1848B10F2C46EC90005849F1 /* ShoppingListUITests */,
 				1848B0F22C46EC8E005849F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +108,7 @@
 				1848B0F82C46EC90005849F1 /* Assets.xcassets */,
 				1848B0FA2C46EC90005849F1 /* ShoppingList.entitlements */,
 				1848B0FB2C46EC90005849F1 /* Preview Content */,
+				1848B13E2C51AE83005849F1 /* ArticlesContainer.xcdatamodeld */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -122,23 +119,6 @@
 				1848B0FC2C46EC90005849F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1848B1052C46EC90005849F1 /* ShoppingListTests */ = {
-			isa = PBXGroup;
-			children = (
-				1848B1062C46EC90005849F1 /* ShoppingListTests.swift */,
-			);
-			path = ShoppingListTests;
-			sourceTree = "<group>";
-		};
-		1848B10F2C46EC90005849F1 /* ShoppingListUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1848B1102C46EC90005849F1 /* ShoppingListUITests.swift */,
-				1848B1122C46EC90005849F1 /* ShoppingListUITestsLaunchTests.swift */,
-			);
-			path = ShoppingListUITests;
 			sourceTree = "<group>";
 		};
 		1848B11F2C4728E7005849F1 /* Views */ = {
@@ -164,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1848B1322C4D3C44005849F1 /* HomeViewModel.swift */,
+				1848B1392C51ACF8005849F1 /* DataStackModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,11 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1848B13A2C51ACF8005849F1 /* DataStackModel.swift in Sources */,
 				1848B12F2C4D28FD005849F1 /* ItemModel.swift in Sources */,
 				1848B1332C4D3C44005849F1 /* HomeViewModel.swift in Sources */,
 				1848B1232C4D1334005849F1 /* ListItemView.swift in Sources */,
 				1848B1212C4728F7005849F1 /* HomeView.swift in Sources */,
 				1848B0F52C46EC8E005849F1 /* ShoppingListApp.swift in Sources */,
+				1848B1402C51AE83005849F1 /* ArticlesContainer.xcdatamodeld in Sources */,
 				1848B1292C4D1618005849F1 /* AddItemView.swift in Sources */,
 				1848B1352C505A8B005849F1 /* EmptyStateView.swift in Sources */,
 			);
@@ -312,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1848B1072C46EC90005849F1 /* ShoppingListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,8 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1848B1132C46EC90005849F1 /* ShoppingListUITestsLaunchTests.swift in Sources */,
-				1848B1112C46EC90005849F1 /* ShoppingListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +633,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1848B13E2C51AE83005849F1 /* ArticlesContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1848B13F2C51AE83005849F1 /* ArticlesContainer.xcdatamodel */,
+			);
+			currentVersion = 1848B13F2C51AE83005849F1 /* ArticlesContainer.xcdatamodel */;
+			name = ArticlesContainer.xcdatamodeld;
+			path = /Users/sumukhakashyap/Documents/ShoppingList/ShoppingList/ArticlesContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1848B0E92C46EC8E005849F1 /* Project object */;
 }
