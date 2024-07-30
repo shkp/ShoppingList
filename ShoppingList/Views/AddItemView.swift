@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct AddItemView: View {
     @Environment(\.dismiss) var dismiss
@@ -50,7 +49,8 @@ struct AddItemView: View {
             
             Button(action: {
                 guard !textFieldTitle.isEmpty else {return}
-                articlesViewModel.addArticle(name: textFieldTitle, quantity: textFieldQuantity)},
+                articlesViewModel.addArticle(name: textFieldTitle, quantity: textFieldQuantity)
+                dismiss()},
                    label: {
                        Text("Add")
                        .frame(height: 60)
@@ -78,15 +78,6 @@ struct AddItemView: View {
         }
         .padding(14)
         .alert(isPresented: $showAlert, content: getAlert)
-        
-    }
-
-    
-    func saveButtonPressed(){
-        if isFieldEmpty() == false {
-            homeViewModel.addItem(title: textFieldTitle, description: textFieldDescription)
-            presentationMode.wrappedValue.dismiss()
-        }
         
     }
     

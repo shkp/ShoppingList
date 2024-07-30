@@ -39,8 +39,21 @@ class DataStackModel: ObservableObject{
         let newArticle = ArticleEntity(context: itemsPersistentContainer.viewContext)
         newArticle.name = name
         newArticle.standardQuantityInGms = quantity
+        saveArticles()        
+    }
+    
+    func updateArticle(entity: ArticleEntity){
+        let currentName = entity.name ?? ""
+        let newName = currentName + "!"
+        entity.name = newName
         saveArticles()
-        
+    }
+    
+    func deleteArticle(indexSet: IndexSet){
+        guard let index = indexSet.first else {return}
+        let entity = savedArticles[index]
+        itemsPersistentContainer.viewContext.delete(entity)
+        saveArticles()
     }
     
     func saveArticles(){

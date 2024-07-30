@@ -6,12 +6,11 @@
 //
 
 import SwiftUI
-import CoreData
+
 
 struct HomeView: View {
     
-    @EnvironmentObject var homeViewModel: HomeViewModel
-    @State private var showingSheet = false
+    @State public var showingSheet = false
     @StateObject var articlesViewModel = DataStackModel()
     
     var body: some View {
@@ -22,22 +21,12 @@ struct HomeView: View {
                 List{
                     ForEach(articlesViewModel.savedArticles){ entity in
                         Text(entity.name ?? "N/A")
+                            .onTapGesture {
+                                articlesViewModel.updateArticle(entity: entity)
+                            }
                     }
-                        
-//                        ListItemView(item: item)
-//                            .onTapGesture {
-//                                withAnimation(.linear){
-//                                    homeViewModel.updateItemCompletionState(item: item)
-//                                }
-//                            }
-//                    }
-//                    .onDelete(perform: homeViewModel.deleteItem)
-//                    .onMove(perform: homeViewModel.moveItem)
-//                    .frame(maxWidth: .infinity,
-//                            maxHeight: .infinity,
-//                            alignment: .leading)
-//                    
-//                    
+                    .onDelete(perform: articlesViewModel.deleteArticle)
+                
                 }
                 .listStyle(PlainListStyle())
             }
@@ -48,11 +37,10 @@ struct HomeView: View {
                     leading: EditButton(),
                     trailing: Button("Add"){
                         showingSheet.toggle()
-                    }.sheet(isPresented: $showingSheet, content: {
+                    }.sheet(isPresented: $showingSheet, onDismiss: {articlesViewModel.fetchArticles()}, content: {
                         AddItemView()
                             .presentationDetents([.medium])
                             .presentationDragIndicator(.visible)
-
                     })
                 )
             }
